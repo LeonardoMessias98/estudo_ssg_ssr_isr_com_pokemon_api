@@ -6,7 +6,7 @@ const Home: NextPage = ({ pokemons }: any) => {
   return <PokeHome pokemons={pokemons} />;
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const getPokemons = async () => {
     const response = await axios.get(
       "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1000"
